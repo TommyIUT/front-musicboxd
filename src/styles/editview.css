@@ -1,0 +1,50 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('../font/GothamLight.ttf')
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../font/GothamBold.ttf')
+}
+
+.editView{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background-color: #1a1a1a;
+    font-size: 'Gotham';
+    color: white;
+}
+
+.input-modif {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	text-align: left;
+  }
+
+input[type="modif"] {
+	padding: 10px;
+	border-radius: 5px;
+    width: 300px;
+	border: none;
+	font-size: 16px;
+  }
+
+  input[type="bigmodif"] {
+	padding: 10px;
+	border-radius: 5px;
+    width: 500px;
+    height: 100px;
+	border: none;
+	font-size: 16px;
+  }
+
+  .pseudoModif{
+    font-family: 'GothamBold';
+    font-size: 75px;
+    margin-left: 20px;
+  }

@@ -1,0 +1,86 @@
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../font/GothamLight.ttf')
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../font/GothamBold.ttf')
+}
+
+.connexionView{
+	position: fixed;
+	background-color: #1a1a1a;
+    font-family: 'GothamLight';
+	top: 0;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-login {
+	width: 400px;
+    background-color: #1a1a1a;
+	border-color: #1a1a1a;
+}
+
+
+.login-form {
+	width: 400px;
+	background-color: #1a1a1a;
+  }
+  
+  .input-login {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	text-align: left;
+  }
+  
+  label {
+	margin-bottom: 5px;
+	color: white;
+	font-family: 'GothamBold';
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  input[type="id"] {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	font-size: 16px;
+  }
+  
+  .login-button {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	font-family: 'GothamBold';
+	background-color: #1ED75A;
+	color: black;
+	float: right;
+	margin-bottom: 15px;
+	cursor: pointer;
+  }
+
+  .login-button:hover{
+	color: white;
+    background-color: #1a1a1a;
+  }
+  
+  .divider {
+	height: 1px;
+	background-color: #fff;
+	width: 100%;
+	margin-bottom: 30px;
+  }
+
+  .noaccount{
+	margin-top: 15px;
+	color:  white;
+	font-size: 18px;
+	}

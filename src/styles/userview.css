@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../font/GothamLight.ttf')
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../font/GothamBold.ttf')
+}
+
+.userView{
+    position: fixed;
+    font-family: 'GothamLight';
+    top: 0;
+    right: 0%;
+    left: 225px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow: auto;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.pseudo{
+    font-family: 'GothamBold';
+    font-size: 10vh;
+    margin-left: 10px;
+}
+
+.idUser{
+    margin-left: 20px;
+    font-size: 3vh;
+    margin-top: -45px;
+    color: #1ED75A;
+}
+
+.voiractivite{
+    color: white;
+    font-size: 25px;
+    margin-left: 65vw;
+    text-decoration: underline;
+}
+
+.liennormal{
+    color: white;
+    text-decoration: underline;
+}
+
+.pronomUser{
+    margin-left: 20px;
+    font-size: 4vh;
+    margin-top: 0px;
+}
+
+.espace{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.bioUser{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 600px;
+}
+
+.bibliothequeUser{
+    position: absolute;
+    top: 390px;
+    left: 170px;
+    color: white;
+    z-index: 8;
+}

@@ -1,0 +1,26 @@
+.bar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 225px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 4;
+    float:left;
+}
+
+.enbasla{
+    position: absolute;
+    bottom: 30px;
+}
+
+.logo-sidebar {
+    width: 200px; /* limite la largeur maximale de l'image à la largeur de la sidebar */
+    padding: 10px;
+    background-color: black;
+    border-color: black;
+}

@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'GothamLight';
+	src: url('../font/GothamLight.ttf')
+}
+
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../font/GothamBold.ttf')
+}
+
+.InscriptionView{
+    position: fixed;
+	background-color: #1a1a1a;
+    font-family: 'GothamLight';
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rejoindre{
+    color: white;
+    font-size: 40px;
+    font-family: 'GothamBold';
+}
+
+.lien{
+    color: white;
+    font-family: 'GothamBold';
+    text-decoration: underline;
+}
+
+.Toastify__toast {
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'GothamLight';
+  }
+  .Toastify__toast--success {
+    background-color: #1ED75A;
+  }
+  .Toastify__toast--error {
+    background-color: #FF4444;
+  }
+  
