@@ -92,7 +92,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
 
     async function fetchListenList(id) {
       try{
-          const response = await fetch(`http://localhost:5000/listenlist/${user}/${id}`, {
+          const response = await fetch(`https://bmusicboxd.onrender.com/listenlist/${user}/${id}`, {
             method: "GET",
             headers: {"Content-Type" : "application/json"},
         });
@@ -110,7 +110,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
 
       async function fetchReview(id) {
         try{
-            const response = await fetch(`http://localhost:5000/review/${user}/${id}`, {
+            const response = await fetch(`https://bmusicboxd.onrender.com/review/${user}/${id}`, {
               method: "GET",
               headers: {"Content-Type" : "application/json"},
           });
@@ -144,7 +144,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
             const nom_album = albumData.title
             const photo = albumData.cover_medium
             const body = { id_user, id_album, nom_album, photo }
-            const response = await fetch(`http://localhost:5000/listenlist/`, {
+            const response = await fetch(`https://bmusicboxd.onrender.com/listenlist/`, {
                 method: "POST",
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify(body)
@@ -165,7 +165,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
                 const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                 const contenu = 'Vous avez ajouté ' + albumData.title + ' à votre listenlist'
                 const body = {id_user, activite_date, contenu}
-                const responseact = await fetch(`http://localhost:5000/activite/`, {
+                const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                     method: "POST",
                     headers: {"Content-Type" : "application/json"},
                     body: JSON.stringify(body)
@@ -183,7 +183,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
     
       async function deleteListenlist() {
         try {
-            const response = await fetch(`http://localhost:5000/listenlist/${user}/${albumData.id}`, {
+            const response = await fetch(`https://bmusicboxd.onrender.com/listenlist/${user}/${albumData.id}`, {
                 method: "DELETE",
                 headers: {"Content-Type" : "application/json"}
             });
@@ -202,7 +202,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
                 const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                 const contenu = 'Vous avez retiré ' + albumData.title + ' de votre listenlist'
                 const body = {id_user, activite_date, contenu}
-                const responseact = await fetch(`http://localhost:5000/activite/`, {
+                const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                     method: "POST",
                     headers: {"Content-Type" : "application/json"},
                     body: JSON.stringify(body)
@@ -226,7 +226,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
               const texte = document.getElementById("review_txt").value;
               console.log(texte)
               const body = { id_user, id_album, nom_album, photo,note,texte }
-              const response = await fetch(`http://localhost:5000/review/`, {
+              const response = await fetch(`https://bmusicboxd.onrender.com/review/`, {
                   method: "POST",
                   headers: {"Content-Type" : "application/json"},
                   body: JSON.stringify(body)
@@ -248,7 +248,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
                   const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                   const contenu = 'Vous avez ajouté ' + albumData.title + ' à vos albums écoutés'
                   const body = {id_user, activite_date, contenu}
-                  const responseact = await fetch(`http://localhost:5000/activite/`, {
+                  const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                       method: "POST",
                       headers: {"Content-Type" : "application/json"},
                       body: JSON.stringify(body)
@@ -264,7 +264,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
 
           async function deleteReview() {
             try {
-                const response = await fetch(`http://localhost:5000/review/${user}/${albumData.id}`, {
+                const response = await fetch(`https://bmusicboxd.onrender.com/review/${user}/${albumData.id}`, {
                     method: "DELETE",
                     headers: {"Content-Type" : "application/json"}
                 });
@@ -284,7 +284,7 @@ export default function AlbumView({ isAdmin, setIsAdmin,user, setUser, isConnect
                     const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                     const contenu = 'Vous avez retiré ' + albumData.title + ' de vos albums écoutés'
                     const body = {id_user, activite_date, contenu}
-                    const responseact = await fetch(`http://localhost:5000/activite/`, {
+                    const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},
                         body: JSON.stringify(body)

@@ -26,7 +26,7 @@ export default function AdminView({ isAdmin, setIsAdmin,user, setUser, isConnect
 
       async function fetchUsers() {
         try{
-            const url = `http://localhost:5000/userbox/`;
+            const url = `https://bmusicboxd.onrender.com/userbox/`;
             const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -42,7 +42,7 @@ export default function AdminView({ isAdmin, setIsAdmin,user, setUser, isConnect
 
         async function deluser(id) {
             try{
-                const url = `http://localhost:5000/userbox/${id}`;
+                const url = `https://bmusicboxd.onrender.com/userbox/${id}`;
                 const response = await fetch(url, {
                 method: 'DELETE',
                 headers: {

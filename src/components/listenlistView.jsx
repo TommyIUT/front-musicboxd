@@ -28,7 +28,7 @@ export default function ListenListView({ isAdmin, setIsAdmin,user, setUser, isCo
 
     async function fetchUser(id) {
     try{
-        const url = `http://localhost:5000/userbox/id/${id}`;
+        const url = `https://bmusicboxd.onrender.com/userbox/id/${id}`;
         const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -45,7 +45,7 @@ export default function ListenListView({ isAdmin, setIsAdmin,user, setUser, isCo
 
     async function fetchListenList(id) {
         try{
-            const url = `http://localhost:5000/listenlist/${id}`;
+            const url = `https://bmusicboxd.onrender.com/listenlist/${id}`;
             const response = await fetch(url, {
             method: 'GET',
             headers: {

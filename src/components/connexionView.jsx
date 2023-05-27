@@ -25,7 +25,7 @@ export default function ConnexionView({isAdmin, setIsAdmin,user, setUser, isConn
         if (!(mail==='') && !(password==='')){
 
             // test si mail existe
-            const url = `http://localhost:5000/userbox/mail/${mail}`;
+            const url = `https://bmusicboxd.onrender.com/userbox/mail/${mail}`;
             const response = await fetch(url, {
                 method: "GET"
             });
@@ -35,7 +35,7 @@ export default function ConnexionView({isAdmin, setIsAdmin,user, setUser, isConn
                 toast.error(mail + " n'existe pas");
             } else {
                 const body = {mail, password}
-                const response = await fetch("http://localhost:5000/auth/login", {
+                const response = await fetch("https://bmusicboxd.onrender.com/auth/login", {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},
                         body: JSON.stringify(body)

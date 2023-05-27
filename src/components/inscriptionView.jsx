@@ -37,7 +37,7 @@ export default function InscriptionView({ isAdmin, setIsAdmin,user, setUser, isC
           if (password === password2) {
         
             // test id unique
-            const url1 = `http://localhost:5000/userbox/id/${identifiant}`;
+            const url1 = `https://bmusicboxd.onrender.com/userbox/id/${identifiant}`;
             const response1 = await fetch(url1, {
                 method: "GET"
             });
@@ -48,7 +48,7 @@ export default function InscriptionView({ isAdmin, setIsAdmin,user, setUser, isC
     
     
             // test mail unique
-            const url2 = `http://localhost:5000/userbox/mail/${email}`;
+            const url2 = `https://bmusicboxd.onrender.com/userbox/mail/${email}`;
             const response2 = await fetch(url2, {
                 method: "GET"
             });
@@ -62,7 +62,7 @@ export default function InscriptionView({ isAdmin, setIsAdmin,user, setUser, isC
                }else{
                   if (data1.length===0 && data2.length===0){
                     const body = {email, hashedPassword, identifiant}
-                    const response = await fetch("http://localhost:5000/auth/register", {
+                    const response = await fetch("https://bmusicboxd.onrender.com/auth/register", {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},
                         body: JSON.stringify(body)
@@ -88,7 +88,7 @@ export default function InscriptionView({ isAdmin, setIsAdmin,user, setUser, isC
                         const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                         const contenu = 'vous avez créé votre compte !'
                         const body = {id_user, activite_date, contenu}
-                        const responseact = await fetch(`http://localhost:5000/activite/`, {
+                        const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                             method: "POST",
                             headers: {"Content-Type" : "application/json"},
                             body: JSON.stringify(body)

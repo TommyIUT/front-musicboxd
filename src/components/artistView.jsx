@@ -70,7 +70,7 @@ export default function ArtistView({ isAdmin, setIsAdmin,user, setUser, isConnec
 
     async function checkIfSubbed() {
         try {
-            const response = await fetch(`http://localhost:5000/abonne/${user}/${artistData.id}`, {
+            const response = await fetch(`https://bmusicboxd.onrender.com/abonne/${user}/${artistData.id}`, {
                 method: "GET",
                 headers: {"Content-Type" : "application/json"},
             });
@@ -94,7 +94,7 @@ export default function ArtistView({ isAdmin, setIsAdmin,user, setUser, isConnec
             const nom_artiste = artistData.name
             const photo_artiste = artistData.picture_medium
             const body = { id_user, id_artist, nom_artiste, photo_artiste }
-            const response = await fetch(`http://localhost:5000/abonne/`, {
+            const response = await fetch(`https://bmusicboxd.onrender.com/abonne/`, {
                 method: "POST",
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify(body)
@@ -115,7 +115,7 @@ export default function ArtistView({ isAdmin, setIsAdmin,user, setUser, isConnec
                 const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                 const contenu = 'Vous vous êtes abonné à ' + artistData.name
                 const body = {id_user, activite_date, contenu}
-                const responseact = await fetch(`http://localhost:5000/activite/`, {
+                const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                     method: "POST",
                     headers: {"Content-Type" : "application/json"},
                     body: JSON.stringify(body)
@@ -131,7 +131,7 @@ export default function ArtistView({ isAdmin, setIsAdmin,user, setUser, isConnec
 
         async function DeSubTo() {
             try {
-                const response = await fetch(`http://localhost:5000/abonne/${user}/${artistData.id}`, {
+                const response = await fetch(`https://bmusicboxd.onrender.com/abonne/${user}/${artistData.id}`, {
                     method: "DELETE",
                     headers: {"Content-Type" : "application/json"}
                 });
@@ -150,7 +150,7 @@ export default function ArtistView({ isAdmin, setIsAdmin,user, setUser, isConnec
                     const activite_date = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                     const contenu = 'Vous vous êtes désabonné de ' + artistData.name
                     const body = {id_user, activite_date, contenu}
-                    const responseact = await fetch(`http://localhost:5000/activite/`, {
+                    const responseact = await fetch(`https://bmusicboxd.onrender.com/activite/`, {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},
                         body: JSON.stringify(body)

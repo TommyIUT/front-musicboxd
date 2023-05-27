@@ -108,7 +108,7 @@ export default function EditView({ isAdmin, setIsAdmin,user, setUser, isConnecte
             toast.error('Veuillez renseigner une photo de profil valide')
         } else{
             const body = {newpseudo, newbio, newpronoms, newloc,newphoto}
-            const url = 'http://localhost:5000/userbox/'+user;
+            const url = 'https://bmusicboxd.onrender.com/userbox/'+user;
             console.log(body)
             try{
                 const response = await fetch(url, {
@@ -135,7 +135,7 @@ export default function EditView({ isAdmin, setIsAdmin,user, setUser, isConnecte
 
     async function fetchUser(id) {
         try{
-        const url = `http://localhost:5000/userbox/id/${id}`;
+        const url = `https://bmusicboxd.onrender.com/userbox/id/${id}`;
         const response = await fetch(url, {
             method: 'GET',
             headers: {

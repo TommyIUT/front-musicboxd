@@ -27,7 +27,7 @@ export default function ArtistsView({ isAdmin, setIsAdmin,user, setUser, isConne
 
     async function fetchUser(id) {
     try{
-        const url = `http://localhost:5000/userbox/id/${id}`;
+        const url = `https://bmusicboxd.onrender.com/userbox/id/${id}`;
         const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -44,7 +44,7 @@ export default function ArtistsView({ isAdmin, setIsAdmin,user, setUser, isConne
 
     async function fetchArtists(id) {
         try{
-            const url = `http://localhost:5000/abonne/${id}`;
+            const url = `https://bmusicboxd.onrender.com/abonne/${id}`;
             const response = await fetch(url, {
             method: 'GET',
             headers: {
