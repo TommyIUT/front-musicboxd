@@ -26,7 +26,7 @@ export default function UserView({ isAdmin, setIsAdmin,user, setUser, isConnecte
 
   async function fetchUser(id) {
     try{
-      const url = `https://bmusicboxd.onrender.com/id/${id}`;
+      const url = `https://bmusicboxd.onrender.com/userbox/id/${id}`;
       const response = await fetch(url, {
         method: 'GET',
         headers: {
