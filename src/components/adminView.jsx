@@ -75,7 +75,7 @@ export default function AdminView({ isAdmin, setIsAdmin,user, setUser, isConnect
                             />
                             <p className='iduser'>@{user.identifiant}</p>
                             <p className='pseudouser'>{user.pseudo}</p>
-                            <IconButton aria-label="delete" size="large" sx={{position:'fixed',marginTop:'1vh',marginLeft:'50vw', zIndex:'4'}} onClick={() => deluser(user.identifiant)}>
+                            <IconButton aria-label="delete" size="large" sx={{position:'absolute',marginTop:'1vh',marginLeft:'50vw', zIndex:'4'}} onClick={() => deluser(user.identifiant)}>
                             <DeleteIcon sx={{color:'#1ED75A'}} fontSize='2.5rem'/>
                             </IconButton>
 
